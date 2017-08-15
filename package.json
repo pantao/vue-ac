@@ -1,0 +1,31 @@
+{
+  "name": "vue-ac",
+  "version": "0.0.0",
+  "description": "Vue Access Control plugin",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pantao/vue-ac.git"
+  },
+  "keywords": [
+    "vuejs",
+    "vue",
+    "acl",
+    "ac",
+    "permission"
+  ],
+  "author": "pantao <54778899@qq.com>",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/pantao/vue-ac/issues"
+  },
+  "homepage": "https://github.com/pantao/vue-ac#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "vue": "^2.4.2"
+  }
+}
