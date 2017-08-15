@@ -6,9 +6,6 @@ export default class AC {
       get () {
         return {
           check (roles) {
-            if (typeof roles === 'string') {
-              roles = roles.split(';')
-            }
             return ac.check(roles)
           },
           addRole (role) {
@@ -43,6 +40,9 @@ export default class AC {
   }
 
   check (roles) {
+    if (typeof roles === 'string') {
+      roles = roles.split(';')
+    }
     let checked = false
     roles.forEach(role => {
       if (this.roles.indexOf(role) > -1) {
@@ -64,5 +64,18 @@ export default class AC {
 
   clearRoles () {
     this.roles = []
+  }
+
+  set router (router) {
+    router.beforeEach((to, from, next) => {
+      const fail = to.meta.fail || '/'
+      if (typeof to.meta.ac === 'undefined' || to.meta.ac === '')
+        return next()
+      else {
+        if (!this.check(to.meta.ac))
+          return next(fail)
+        next()
+      }
+    })
   }
 }
