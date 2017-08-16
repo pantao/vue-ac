@@ -24,6 +24,7 @@ Vue.use(VueAc, {
 
 ### router 
 
+```
 router.addRoutes([
   {
     path: '/path',
@@ -35,3 +36,4 @@ router.addRoutes([
     }
   }
 ])
+```
