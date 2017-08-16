@@ -62,7 +62,7 @@ export default class AC {
   }
 
   addRoles (roles) {
-    roles.forEach(this.addRole)
+    roles.forEach(role => this.addRole(role))
   }
 
   clearRoles () {
