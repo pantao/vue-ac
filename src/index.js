@@ -43,6 +43,9 @@ export default class AC {
   }
 
   check (roles) {
+    if (typeof roles === 'undefined' || roles === null) {
+      return true
+    }
     if (typeof roles === 'string') {
       roles = roles.split(';')
     }
