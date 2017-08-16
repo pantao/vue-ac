@@ -1,6 +1,6 @@
 {
   "name": "vue-ac",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Vue Access Control plugin",
   "main": "lib/index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/pantao/vue-ac#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "vue": "^2.4.2"
   }
 }

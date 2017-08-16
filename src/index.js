@@ -33,7 +33,8 @@ export default class AC {
     this.router = router
     if (!Array.isArray(roles)) {
       if (typeof roles === 'string') {
-        roles = roles.split(';')
+        this.roles = roles.split(';')
+        return
       } else {
         throw new TypeError('roles must be any array')
       }
